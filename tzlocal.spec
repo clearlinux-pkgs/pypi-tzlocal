@@ -4,13 +4,12 @@
 #
 Name     : tzlocal
 Version  : 1.4
-Release  : 6
+Release  : 7
 URL      : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Source0  : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Summary  : tzinfo object for the local timezone
 Group    : Development/Tools
 License  : CC0-1.0 MIT Universal
-Requires: tzlocal-legacypython
 Requires: tzlocal-python3
 Requires: tzlocal-python
 Requires: pytz
@@ -44,19 +43,9 @@ BuildRequires : setuptools
         Supported systems
         -----------------
 
-%package legacypython
-Summary: legacypython components for the tzlocal package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the tzlocal package.
-
-
 %package python
 Summary: python components for the tzlocal package.
 Group: Default
-Requires: tzlocal-legacypython
 Requires: tzlocal-python3
 
 %description python
@@ -80,8 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507180194
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1519425830
 python3 setup.py build -b py3
 
 %check
@@ -90,20 +78,14 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python3.6/site-packages python3 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1507180194
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
