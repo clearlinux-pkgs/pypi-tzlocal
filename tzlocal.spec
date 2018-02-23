@@ -4,12 +4,12 @@
 #
 Name     : tzlocal
 Version  : 1.4
-Release  : 7
+Release  : 8
 URL      : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Source0  : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Summary  : tzinfo object for the local timezone
 Group    : Development/Tools
-License  : CC0-1.0 MIT Universal
+License  : CC0-1.0 MIT
 Requires: tzlocal-python3
 Requires: tzlocal-python
 Requires: pytz
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1519425830
+export SOURCE_DATE_EPOCH=1519425901
 python3 setup.py build -b py3
 
 %check
