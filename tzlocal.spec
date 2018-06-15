@@ -4,7 +4,7 @@
 #
 Name     : tzlocal
 Version  : 1.4
-Release  : 10
+Release  : 11
 URL      : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Source0  : http://pypi.debian.net/tzlocal/tzlocal-1.4.tar.gz
 Summary  : tzinfo object for the local timezone
