@@ -15,7 +15,7 @@ Requires: tzlocal-python
 Requires: pytz
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : pytz
 BuildRequires : setuptools
