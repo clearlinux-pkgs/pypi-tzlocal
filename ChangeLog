@@ -1,6 +1,24 @@
 Changes
 =======
 
+1.5.1 (2017-12-01)
+------------------
+
+- 1.5 had a bug that slipped through testing, fixed that,
+  increased test coverage.
+
+
+1.5 (2017-11-30)
+----------------
+
+- No longer treats macOS as special, but as a unix.
+
+- get_windows_info.py is renamed to update_windows_mappings.py
+
+- Windows mappings now also contain mappings from deprecated zoneinfo names.
+  (Preston-Landers, regebro)
+
+
 1.4 (2017-04-18)
 ----------------
 
@@ -20,6 +38,9 @@ Changes
 ------------------
 
 - Ensure closing of subprocess on OS X (ayalash)
+DOING: Implementing feedback on the unsubscribe button
+DOING: Investigating remaining issues with DOCX export
+BLOCKERS: None
 
 - Removed unused imports (jwilk)
 
