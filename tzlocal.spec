@@ -4,7 +4,7 @@
 #
 Name     : tzlocal
 Version  : 1.5.1
-Release  : 22
+Release  : 23
 URL      : https://files.pythonhosted.org/packages/cb/89/e3687d3ed99bc882793f82634e9824e62499fdfdc4b1ae39e211c5b05017/tzlocal-1.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cb/89/e3687d3ed99bc882793f82634e9824e62499fdfdc4b1ae39e211c5b05017/tzlocal-1.5.1.tar.gz
 Summary  : tzinfo object for the local timezone
