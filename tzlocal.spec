@@ -89,7 +89,6 @@ Summary: python3 components for the tzlocal package.
 Group: Default
 Requires: python3-core
 Provides: pypi(tzlocal)
-Requires: pypi(pytz_deprecation_shim)
 
 %description python3
 python3 components for the tzlocal package.
