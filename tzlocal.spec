@@ -4,7 +4,7 @@
 #
 Name     : tzlocal
 Version  : 4.1
-Release  : 41
+Release  : 42
 URL      : https://files.pythonhosted.org/packages/f7/cc/5543aa3e3e0c10f5fa6d0010eead722e0a5cc610f543fc6e816648d73ed7/tzlocal-4.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/cc/5543aa3e3e0c10f5fa6d0010eead722e0a5cc610f543fc6e816648d73ed7/tzlocal-4.1.tar.gz
 Summary  : tzinfo object for the local timezone
@@ -89,6 +89,7 @@ Summary: python3 components for the tzlocal package.
 Group: Default
 Requires: python3-core
 Provides: pypi(tzlocal)
+Requires: pypi(pytz_deprecation_shim)
 
 %description python3
 python3 components for the tzlocal package.
@@ -103,7 +104,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636418669
+export SOURCE_DATE_EPOCH=1636499993
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
