@@ -4,7 +4,7 @@
 #
 Name     : pypi-tzlocal
 Version  : 4.1
-Release  : 46
+Release  : 47
 URL      : https://files.pythonhosted.org/packages/f7/cc/5543aa3e3e0c10f5fa6d0010eead722e0a5cc610f543fc6e816648d73ed7/tzlocal-4.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/cc/5543aa3e3e0c10f5fa6d0010eead722e0a5cc610f543fc6e816648d73ed7/tzlocal-4.1.tar.gz
 Summary  : tzinfo object for the local timezone
@@ -102,7 +102,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641598831
+export SOURCE_DATE_EPOCH=1648079876
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
