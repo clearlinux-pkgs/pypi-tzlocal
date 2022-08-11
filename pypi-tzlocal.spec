@@ -4,7 +4,7 @@
 #
 Name     : pypi-tzlocal
 Version  : 4.2
-Release  : 51
+Release  : 52
 URL      : https://files.pythonhosted.org/packages/7d/b9/164d5f510e0547ae92280d0ca4a90407a15625901afbb9f57a19d9acd9eb/tzlocal-4.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7d/b9/164d5f510e0547ae92280d0ca4a90407a15625901afbb9f57a19d9acd9eb/tzlocal-4.2.tar.gz
 Summary  : tzinfo object for the local timezone
