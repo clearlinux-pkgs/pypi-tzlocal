@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-tzlocal
-Version  : 4.3
-Release  : 58
-URL      : https://files.pythonhosted.org/packages/39/97/b15b711a10d0774390404bec9712b2647b0b53a4da50a08acf7d7e51e284/tzlocal-4.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/39/97/b15b711a10d0774390404bec9712b2647b0b53a4da50a08acf7d7e51e284/tzlocal-4.3.tar.gz
+Version  : 5.0.1
+Release  : 59
+URL      : https://files.pythonhosted.org/packages/ee/f5/3e644f08771b242f7460438cdc0aaad4d1484c1f060f1e52f4738d342983/tzlocal-5.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ee/f5/3e644f08771b242f7460438cdc0aaad4d1484c1f060f1e52f4738d342983/tzlocal-5.0.1.tar.gz
 Summary  : tzinfo object for the local timezone
 Group    : Development/Tools
 License  : MIT
@@ -15,9 +15,7 @@ Requires: pypi-tzlocal-license = %{version}-%{release}
 Requires: pypi-tzlocal-python = %{version}-%{release}
 Requires: pypi-tzlocal-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(pytz_deprecation_shim)
 BuildRequires : pypi(setuptools)
-BuildRequires : pypi(tzdata)
 BuildRequires : pypi(wheel)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -55,18 +53,16 @@ Summary: python3 components for the pypi-tzlocal package.
 Group: Default
 Requires: python3-core
 Provides: pypi(tzlocal)
-Requires: pypi(pytz_deprecation_shim)
-Requires: pypi(tzdata)
 
 %description python3
 python3 components for the pypi-tzlocal package.
 
 
 %prep
-%setup -q -n tzlocal-4.3
-cd %{_builddir}/tzlocal-4.3
+%setup -q -n tzlocal-5.0.1
+cd %{_builddir}/tzlocal-5.0.1
 pushd ..
-cp -a tzlocal-4.3 buildavx2
+cp -a tzlocal-5.0.1 buildavx2
 popd
 
 %build
@@ -74,12 +70,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679328233
+export SOURCE_DATE_EPOCH=1684175622
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/

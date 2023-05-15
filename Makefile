@@ -1,5 +1,5 @@
 PKG_NAME := pypi-tzlocal
-URL = https://files.pythonhosted.org/packages/39/97/b15b711a10d0774390404bec9712b2647b0b53a4da50a08acf7d7e51e284/tzlocal-4.3.tar.gz
+URL = https://files.pythonhosted.org/packages/ee/f5/3e644f08771b242f7460438cdc0aaad4d1484c1f060f1e52f4738d342983/tzlocal-5.0.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
